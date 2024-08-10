@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "./assets/logo.png";
 import GroupedImage from "./assets/GroupedImage1.png";
+
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <>
       <header className="flex w-screen h-20 bg-[#0fa79e]">
@@ -12,11 +15,12 @@ function App() {
           <div className="flex lg:hidden">
             <button
               type="button"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
             >
               <span className="sr-only">Open main menu</span>
               <svg
-                className="h-10 w-10"
+                className={`${isMenuOpen ? "hidden" : "block"} h-10 w-10`}
                 fill="#FFF"
                 viewBox="0 0 24 24"
                 strokeWidth="2"
@@ -30,11 +34,11 @@ function App() {
                 />
               </svg>
               <svg
-                className="hidden h-6 w-6"
+                className={`${isMenuOpen ? "block" : "hidden"} h-10 w-10`}
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
+                strokeWidth="2"
+                stroke="#fff"
                 aria-hidden="true"
               >
                 <path
@@ -46,29 +50,57 @@ function App() {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12 items-center">
-            <a href="#" className="text-xs font-normal text-white">
+            <a href="#" className="text-md font-normal text-white">
               Home
             </a>
-            <a href="#" className="text-xs font-normal text-white">
+            <a href="#" className="text-md font-normal text-[#0fa79e]">
               About
             </a>
-            <a href="#" className="text-xs font-normal text-white">
+            <a href="#" className="text-md font-normal text-white">
               Features
             </a>
-            <a href="#" className="text-xs font-normal text-white">
+            <a href="#" className="text-md font-normal text-white">
               Pricing
             </a>
-            <a href="#" className="text-xs font-normal text-white">
+            <a href="#" className="text-md font-normal text-white">
               Contact Us
             </a>
-            <a className=" px-1">
-              <button className="border-2 border-white text-white font-normal text-xs  py-1 px-3 hover:bg-white hover:text-[#0fa79e] rounded duration-300">
+            <a className="px-1 hidden lg:flex">
+              <button className="border-2 border-white text-white font-normal text-xs py-2 px-5 hover:bg-white hover:text-[#0fa79e] rounded duration-300">
                 Login
               </button>
             </a>
           </div>
         </div>
+
+       
       </header>
+       {isMenuOpen && (
+          <div className="lg:hidden relative z-50" >
+            <div className="absolute flex flex-col bg-[#FFFFFF] w-full px-2 pb-4">
+              <a href="#" className="text-md font-normal text-white py-2">
+                Home
+              </a>
+              <a href="#" className="text-md font-normal text-white py-2">
+                About
+              </a>
+              <a href="#" className="text-md font-normal text-white py-2">
+                Features
+              </a>
+              <a href="#" className="text-md font-normal text-white py-2">
+                Pricing
+              </a>
+              <a href="#" className="text-md font-normal text-white py-2">
+                Contact Us
+              </a>
+              <button className="border-2 border-white text-white font-normal text-xs py-2 px-5 hover:bg-white hover:text-[#0fa79e] rounded duration-300 mt-2">
+                Login
+              </button>
+            </div>
+          </div>
+        )}
+
+
       <section className="bg-[#0fa79e] min-h-[580px] relative w-screen flex items-center justify-center">
         {/* <div className="absolute">
           <svg width="100%" height="355px" viewBox="0 0 1920 355" version="1.1">
@@ -108,20 +140,23 @@ function App() {
               </div>
             </div>
             <div className="col-4">
-              <div className="relative">
-                <img
+              <div className="md:relative lg:flex hidden">
+                <div>
+   <img
                   src={GroupedImage}
-                  className="object-contain w-[250px] h-[320px] absolute"
+                  className="object-contain w-[250px] h-[450px] absolute top-[-150px]"
                 />
                 <img
                   src={GroupedImage}
-                  className="object-contain w-[250px] h-[320px] absolute left-[50px] top-[50px]"
+                  className="object-contain w-[250px] h-[450px] absolute left-[50px] top-[-100px]"
                 />
+                </div>
+             
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </div> 
+      </section> 
     </>
   );
 }
