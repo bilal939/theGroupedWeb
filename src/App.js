@@ -53,7 +53,7 @@ function App() {
             <a href="#" className="text-md font-normal text-white">
               Home
             </a>
-            <a href="#" className="text-md font-normal text-[#0fa79e]">
+            <a href="#" className="text-md font-normal text-white ">
               About
             </a>
             <a href="#" className="text-md font-normal text-white">
@@ -77,20 +77,20 @@ function App() {
       </header>
        {isMenuOpen && (
           <div className="lg:hidden relative z-50" >
-            <div className="absolute flex flex-col bg-[#FFFFFF] w-full px-2 pb-4">
-              <a href="#" className="text-md font-normal text-white py-2">
+            <div className="absolute flex flex-col bg-[#FFFFFF] w-full p-[20px] rounded-lg">
+              <a href="#" className="text-md font-normal text-[#0fa79e] py-2 m-2">
                 Home
               </a>
-              <a href="#" className="text-md font-normal text-white py-2">
+              <a href="#" className="text-md font-normal text-[#0fa79e] py-2 m-2">
                 About
               </a>
-              <a href="#" className="text-md font-normal text-white py-2">
+              <a href="#" className="text-md font-normal text-[#0fa79e] py-2 m-2">
                 Features
               </a>
-              <a href="#" className="text-md font-normal text-white py-2">
+              <a href="#" className="text-md font-normal text-[#0fa79e] py-2 m-2">
                 Pricing
               </a>
-              <a href="#" className="text-md font-normal text-white py-2">
+              <a href="#" className="text-md font-normal text-[#0fa79e] py-2 m-2">
                 Contact Us
               </a>
               <button className="border-2 border-white text-white font-normal text-xs py-2 px-5 hover:bg-white hover:text-[#0fa79e] rounded duration-300 mt-2">
@@ -102,7 +102,7 @@ function App() {
 
 
       <section className="bg-[#0fa79e] min-h-[580px] relative w-screen flex items-center justify-center">
-        {/* <div className="absolute">
+        <div className="absolute bottom-[-148px] lg:bottom-[-250px]">
           <svg width="100%" height="355px" viewBox="0 0 1920 355" version="1.1">
             <g
               id="Page-1"
@@ -123,28 +123,29 @@ function App() {
               </g>
             </g>
           </svg>
-        </div> */}
+        </div>
         <div className="container">
-          <div className="grid grid-cols-2">
+          <div className="grid  lg:grid-cols-2">
             <div className="col-8">
               <div className="text-center md:text-left">
-                <h2 className="text-white text-xl font-semibold">
+                <h2 className="text-white text-3xl lg:text-5xl font-semibold">
                   Connect, Discover, Share:
                 </h2>
-                <h1 className="text-white font-bold mt-2">
-                  Your Journey Starts Here
+                <h1 className="text-white text-5xl lg:text-7xl font-bold mt-2">
+                  Your Journey Start's Here
                 </h1>
-                <button className="border-2 border-white text-white font-normal text-xs  py-1 hover:bg-white hover:text-[#0fa79e] rounded duration-300 h-[40px] w-[90px] mt-5">
+                
+                <button className="border-2 border-white text-white font-normal text-xs  py-1 hover:bg-white hover:text-[#0fa79e] rounded duration-300 h-[50px] w-[130px] mt-5">
                   Get Started
                 </button>
               </div>
             </div>
             <div className="col-4">
-              <div className="md:relative lg:flex hidden">
+              <div className="lg:relative lg:flex hidden">
                 <div>
    <img
                   src={GroupedImage}
-                  className="object-contain w-[250px] h-[450px] absolute top-[-150px]"
+                  className=" object-contain w-[250px] h-[450px] absolute top-[-150px]"
                 />
                 <img
                   src={GroupedImage}
