@@ -66,7 +66,7 @@ function App() {
               Contact Us
             </a>
             <a className="px-1 hidden lg:flex">
-              <button className="border-2 border-white text-white font-normal text-xs py-2 px-5 hover:bg-white hover:text-[#0fa79e] rounded duration-300">
+              <button className="border-2 border-white text-white text-md font-normal  py-2 px-7 hover:bg-white hover:text-[#0fa79e] rounded duration-300">
                 Login
               </button>
             </a>
@@ -93,17 +93,15 @@ function App() {
               <a href="#" className="text-md font-normal text-[#0fa79e] py-2 m-2">
                 Contact Us
               </a>
-              <button className="border-2 border-white text-white font-normal text-xs py-2 px-5 hover:bg-white hover:text-[#0fa79e] rounded duration-300 mt-2">
-                Login
-              </button>
+              
             </div>
           </div>
         )}
 
 
-      <section className="bg-[#0fa79e] min-h-[580px] relative w-screen flex items-center justify-center">
-        <div className="absolute bottom-[-148px] lg:bottom-[-250px]">
-          <svg width="100%" height="355px" viewBox="0 0 1920 355" version="1.1">
+      <section className="bg-[#0fa79e] min-h-[880px] relative w-screen flex  justify-center">
+        <div className="absolute bottom-[-15px] w-full">
+          <svg width="100%" height="100%" viewBox="0 0 1920 355" version="1.1">
             <g
               id="Page-1"
               stroke="none"
@@ -125,7 +123,7 @@ function App() {
           </svg>
         </div>
         <div className="container">
-          <div className="grid  lg:grid-cols-2">
+          <div className="grid  lg:grid-cols-2 pt-[150px]">
             <div className="col-8">
               <div className="text-center md:text-left">
                 <h2 className="text-white text-3xl lg:text-5xl font-semibold">
